@@ -6,21 +6,16 @@ using System.Threading.Tasks;
 
 namespace Bank
 {
-    class BillingAccount
+    class BillingAccount : Account
     {
-        public string AccountNumber;
-        public string FirstName;
-        public string LastName;
-        public decimal Balance;
-        public long PeselNumber;
-
-        public BillingAccount(string accountNumber, string firstName, string lastName, decimal balance, long peselnumber)
+    public BillingAccount(int id, string firstName, string lastName, long peselnumber)
+            : base(id, firstName, lastName, peselnumber)
         {
-            AccountNumber = accountNumber;
-            FirstName = firstName;
-            LastName = lastName;
-            Balance = balance;
-            PeselNumber = peselnumber;
+        }
+
+        public override string TypeName()
+        {
+            return "Konto rozliczeniowe";
         }
     }
 }

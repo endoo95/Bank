@@ -6,21 +6,16 @@ using System.Threading.Tasks;
 
 namespace Bank
 {
-    class SavingsAccount
+    class SavingsAccount : Account //Dziedziczenie klasy
     {
-        public string AccountNumber;
-        public string FirstName;
-        public string LastName;
-        public decimal Balance;
-        public long PeselNumber;
+    public SavingsAccount(int id, string firstName, string lastName, long peselnumber) 
+            : base(id, firstName, lastName, peselnumber) //Referencja do klasy nadrzędnej
+        { 
+        }
 
-        public SavingsAccount(string accountNumber, string firstName, string lastName, decimal balance, long peselnumber)
+        public override string TypeName()
         {
-            AccountNumber = accountNumber;
-            FirstName = firstName;
-            LastName = lastName;
-            Balance = balance;
-            PeselNumber = peselnumber;
+            return "Konto oszczędnościowe";
         }
     }
 }
