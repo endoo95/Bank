@@ -8,8 +8,8 @@ namespace Bank
 {
     class BillingAccount : Account
     {
-    public BillingAccount(int id, string firstName, string lastName, long peselnumber)
-            : base(id, firstName, lastName, peselnumber)
+    public BillingAccount(int id, string firstName, string lastName, long peselNumber)
+            : base(id, firstName, lastName, peselNumber)
         {
         }
 

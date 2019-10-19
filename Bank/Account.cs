@@ -17,7 +17,7 @@ namespace Bank
         public Account(int id, string firstName, string lastName, long peselNumber)
         {
             Id = id;
-            AccountNumber = generateAccountNumber(id);
+            AccountNumber = GenerateAccountNumber(id);
             FirstName = firstName;
             LastName = lastName;
             Balance = 0.0M;
@@ -37,7 +37,7 @@ namespace Bank
             return string.Format("{0}", Balance);
         }
 
-        private string generateAccountNumber(int id)
+        private string GenerateAccountNumber(int id)
         {
             var accountNumber = string.Format("94{0:D10}", id);
             return accountNumber;
