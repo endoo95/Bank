@@ -12,7 +12,7 @@ namespace Bank
         public string AccountNumber { get; }
         public string FirstName { get; }
         public string LastName { get; }
-        public decimal Balance { get; }
+        public decimal Balance { get; set; }
         public long PeselNumber { get; }
         public Account(int id, string firstName, string lastName, long peselNumber)
         {

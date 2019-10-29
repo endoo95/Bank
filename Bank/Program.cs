@@ -19,6 +19,11 @@ namespace Bank
             Console.WriteLine("---");
             Console.WriteLine();
 
+            BankManager bankManager = new BankManager();
+            bankManager.Run();
+
+            /* STARY PROGRAM
+
             //Stworzenie nowego managera kont
             AccountsManager manager = new AccountsManager();
 
@@ -54,6 +59,8 @@ namespace Bank
 
             //Oczekiwanie na ruch użytkownika
             Console.ReadKey();
+
+            */
         }
     }
 }
